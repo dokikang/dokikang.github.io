@@ -157,6 +157,8 @@ p {
 /* Home */
 #home {
   background-color: var(--color-white);
+  padding: 40px;
+  padding-top: 110px;
   text-align: center;
 }
 
@@ -512,7 +514,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-medium);
+    background-color: var(--color-white);
     padding: 8px;
     opacity: 0.9;
   }
@@ -520,7 +522,7 @@ p {
   .navbar__toggle-btn {
     display: block;
     margin-top: -15px;
-    color: var(--color-white);
+    color: var(--color-text);
   }
 
   .navbar__menu {
