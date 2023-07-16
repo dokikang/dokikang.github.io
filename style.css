@@ -157,8 +157,6 @@ p {
 /* Home */
 #home {
   background-color: var(--color-white);
-  padding: 40px;
-  padding-top: 110px;
   text-align: center;
 }
 
