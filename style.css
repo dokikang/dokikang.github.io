@@ -155,12 +155,12 @@ p {
 }
 
 /* Home */
-#home {
+/*#home {
   background-color: var(--color-white);
   padding: 40px;
   padding-top: 110px;
   text-align: center;
-}
+}*/
 
 .home__title,
 .home__description {
