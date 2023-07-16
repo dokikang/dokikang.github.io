@@ -116,13 +116,13 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-medium);
+  background-color: var(--color-white);
 }
 
 .navbar__logo {
   font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
-  color: var(--color-white);
+  color: var(--color-text);
   margin: 10px;
 }
 
@@ -131,7 +131,7 @@ p {
 }
 
 .navbar__menu__item {
-  color: var(--color-white);
+  color: var(--color-text);
   font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
   padding: 8px 16px;
@@ -164,14 +164,14 @@ p {
 
 .home__title,
 .home__description {
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .home__avatar {
   width: 150px;
   height: 150px;
   border-radius: 30%;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-text);
 }
 
 .home__contact {
