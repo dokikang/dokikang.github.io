@@ -156,7 +156,7 @@ p {
 
 /* Home */
 #home {
-  background: url("images/front.png") center/cover no-repeat;
+  background-color: var(--color-white);
   padding: 40px;
   padding-top: 110px;
   text-align: center;
