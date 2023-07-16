@@ -41,7 +41,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 ul {
@@ -110,7 +110,7 @@ p {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
+  background-color: var(--color-white);
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
 }
@@ -171,7 +171,7 @@ p {
   width: 150px;
   height: 150px;
   border-radius: 30%;
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--color-white);
 }
 
 .home__contact {
