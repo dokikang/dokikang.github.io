@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearance & Creepage Distance</title>
+
+    <!----Meta data for page description---->
+    <meta name="description" content="Calculation of clearance and creepage distance for high voltage eleictric motors">
+    <meta name="author" content="Kimmi">
+
+    <!----Favicon (logo on the page tab)---->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!----Add fonts etc.---->
+    <script src="https://kit.fontawesome.com/f2d585ad40.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+
+    <!----Add css & js file---->
+    <!---use "defer" for running js after html is pursued-->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style__subpages.css">
+    <script src="../main.js" defer></script>
+    <script src="calculation.js" defer></script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <i class="fab fa-pagelines"></i>
+            <a href="#">free & blue</a>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#inputs">Inputs</li>
+            <li class="navbar__menu__item" data-link="#results">Results</li>
+            <li class="navbar__menu__item" data-link="#reference">Reference</li>
+        </ul>
+        <!-- Toggle button -->
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <div class="home__container">
+            <h1 class="home__title">Design of clearance & creepage distance</h1>
+            <h2 class="home__description">for high voltage electric machines</h2>
+            <button class="home__contact">Contact me</button>
+        </div>  
+    </section>
+
+    <!-- Input fields -->
+    <section id="inputs">
+        <h1 class="title">Input fields</h1>
+        <div class="input__container">
+            <div class="input__mask">
+                <h3>Max. DC Voltage: </h3>
+                <input type="text" id="dcvoltage">
+                <p>V</p>
+                <span class="remark"></span>
+            </div>
+            <div class="input__mask">
+                <label for="modulation">Modulation: </label>
+                <select name="modulation" id="modulation">
+                    <option value="asymsqwave">Asymmetric Square Wave</option>
+                    <option value="symsqwave">Symmetric Square Wave</option>
+                </select>
+                <p></p>
+                <span class="remark">Default: asymmetric square wave</span>
+            </div>
+            <div class="input__mask">
+                <label for="impulseVoltage">Peak Impulse Voltage: </label>
+                <select name="impulseVoltage" id="impulseVoltage">
+                    <option value="0.33">0.33</option>
+                    <option value="0.40">0.40</option>
+                    <option value="0.50">0.50</option>
+                    <option value="0.60">0.60</option>
+                    <option value="0.80">0.80</option>
+                    <option value="1.00">1.00</option>
+                    <option value="1.20">1.20</option>
+                    <option value="1.50">1.50</option>
+                    <option value="2.00">2.00</option>
+                    <option value="2.50">2.50</option>
+                    <option value="3.00">3.00</option>
+                    <option value="4.00">4.00</option>
+                    <option value="5.00">5.00</option>
+                    <option value="6.00">6.00</option>
+                    <option value="8.00">8.00</option>
+                    <option value="10.00">10.00</option>
+                    <option value="12.00">12.00</option>
+                    <option value="15.00">15.00</option>
+                    <option value="20.00">20.00</option>
+                    <option value="25.00">25.00</option>
+                    <option value="30.00">30.00</option>
+                    <option value="40.00">40.00</option>
+                    <option value="50.00">50.00</option>
+                    <option value="60.00">60.00</option>
+                    <option value="80.00">80.00</option>
+                    <option value="100.00">100.00</option>
+                </select>
+                <p>kV</p>
+                <span class="remark">China: \((1000+V_{max})\cdot\sqrt{2} \)</span>
+            </div>
+            <div class="input__mask">
+                <h3>Inverter Breakdown Voltage: </h3>
+                <input type="text" id="voltage-breakdown">
+                <p>kV</p>
+                <span class="remark"></span>
+            </div>
+            <div class="input__mask">
+                <label for="altitude">Max. Altitude: </label>
+                <select name="altitude" id="altitude">
+                    <option value="2000">2000</option>
+                    <option value="3000">3000</option>
+                    <option value="4000">4000</option>
+                    <option value="5000">5000</option>
+                    <option value="5400">5400</option>
+                    <option value="6000">6000</option>
+                    <option value="7000">7000</option>
+                    <option value="8000">8000</option>
+                    <option value="9000">9000</option>
+                    <option value="10000">10000</option>
+                    <option value="15000">15000</option>
+                    <option value="20000">20000</option>
+                </select>
+                <p>m</p>
+                <span class="remark"></span>
+            </div>
+            <div class="input__mask">
+                <label for="pollution">Pollution Degree: </label>
+                <select name="pollution" id="pollution">
+                    <option value="1">1: No pollution or only dry, nonconductive pollution occurs. The pollution has no effect</option>
+                    <option value="2">2: Normally only nonconductive pollution occurs. Temporary conductivity caused by condensation is to be expected</option>
+                    <option value="3">3: Conductive pollution or dry nonconductive pollution that becomes conductive due to condensation occurs. To be found in industrial environment or construction sites (harsh environments)</option>
+                    <option value="4">4: The pollution generates persistent conductivity caused by conductive dust, rain, or snow</option>
+                </select>
+                <p></p>
+                <span class="remark">
+                    <button onclick="showPopup()">click for more information</button>
+                    <div id="popup" class="hide">
+                        <div class="popup__content">
+                            <h3 class="popup__title">Reduction of pollution degree</h3>
+                            <p>
+                                The pollution degree of internal environment can be reduced through the use of additional protection (enclosure, housing) according to IEC 62109-1 (Table 5).
+                                <h4>IEC 62109-1 Table 5:  Reduction of the pollution degree of internal environment through the use of additional protection</h4>
+                                <table class="popup__table">
+                                    <tr>
+                                        <th>Additional protection</th>
+                                        <th>From pollution degree 2 of external environment to:</th>
+                                        <th>From pollution degree 3 of external environment to:</th>
+                                        <th>Area to which the reduced pollution degree applies</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Enclosure IP5X dust test of IEC 60529 and no internally generated contamination</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>entire inside of the enclosure or that portion which meets IP5X</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Enclosure IPX7 or IPX8 of IEC 60529</td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>entire inside of the enclosure or that portion which meets IPX7 or IPX8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type 1 (IEC 62109-1 7.3.7.8.4.2)  conformal coating or potting (IEC 62109-1 7.3.7.8.6)</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>area under the coating or potting</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type 1 (IEC 62109-1 7.3.7.8.4.2)  conformal coating or potting (IEC 62109-1 7.3.7.8.6)</td>
+                                        <td>treated as solid insulation </td>
+                                        <td>treated as solid insulation </td>
+                                        <td>area under the coating or potting</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hermetically sealed enclosure with measures taken to exclude pollution before sealing, and no internally generated contamination</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>sealed portion of the enclosure</td>
+                                    </tr>
+                                </table>
+                            </p>
+                            <button onclick="closePopup()">Close</button>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="input__mask">
+                <label for="materialGroup">Insulation Material Group: </label>
+                <select name="materialGroup" id="materialGroup">
+                    <option value="I">I: 600 &le; CTI</option>
+                    <option value="II">II: 400 &le; CTI &lt; 600</option>
+                    <option value="IIIa">IIIa: 175 &le; CTI &lt; 400</option>
+                    <option value="IIIb">IIIb: 100 &le; CTI &lt; 175</option>
+                </select>
+                <p></p>
+                <span class="remark"></span>
+            </div>
+            <div class="input__mask">
+                <h3>Max. Conductive Particle: </h3>
+                <input type="text" id="particle">
+                <p>mm</p>
+                <span class="remark"></span>
+            </div>
+            <div class="input__buttons">
+                <form>
+                    <input type="button" value="Enter">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results">
+        <h1 class="title">Results</h1>
+        <div class="results__container">
+            <div class="results__left">
+                <h3 class="results__title">Clearance</h3>
+                <h4>Basic Insulation (GB/T 18488-1)</h4>
+                <div class="results__field">
+                    <p class="value">test</p>
+                    <p>mm with conductive particle</p>
+                </div>
+                <h4>Functional Insulation (calculated)</h4>
+                <div class="results__field">
+                    <p class="value">test</p>
+                    <p>mm with conductive particle</p>
+                </div>
+                <div class="separator__horizontal"></div>
+                <div class="results__subcalculation">
+                    
+                </div>
+            </div>
+            <div class="results__right">
+                <h3 class="results__title">Creepage</h3>
+                <h4>Basic Insulation (according to Mercedes-Benz Standard)</h4>
+                <div class="results__field">
+                    <p class="value">test</p>
+                    <p>mm with conductive particle</p>
+                </div>
+                <h4>Functional Insulation (calculated)</h4>
+                <div class="results__field">
+                    <p class="value">test</p>
+                    <p>mm with conductive particle</p>
+                </div>
+                <div class="separator__horizontal"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reference -->
+    <section id="reference">
+        <h1 class="title">Reference</h1>
+        <div class="reference__container">
+            <h3>Modulation</h3>
+            <div class="check__buttons">
+                <form>
+                    <input type="button" onclick="checkRMSvoltage()" value="Check RMS Voltage">
+                </form>
+            </div>
+        </div>
+        <!-- Modulation -->
+        <div class="modulation__container">
+            <!-- top part -->
+            <div class="modulation__setting">
+                <div>
+                    <h4>Max. DC Voltage: </h4>
+                    <p id="value__dcvoltage"></p>
+                    <p>\(V_{DC} \)</p>
+                </div>
+            </div>
+            <div class="modulation__selection">
+                <div class="selection__options">
+                    <input type="radio" id="modulation__asym" name="modulation" value="AsymSqWave">
+                    <label for="asymsqwave">Asymmetric Square Wave</label><br/>
+                    <input type="radio" id="modulation__sym" name="modulation" value="SymSqWave">
+                    <label for="symsqwave">Symmetric Square Wave</label><br/>
+                </div>
+                
+            </div>
+            <div class="separator__horizontal"></div>
+            <!-- bottom part -->
+            <div class="modulation__value">
+                <div>
+                    <h4>Effective Voltage for Conductor-Ground</h4>
+                    <p>\(V_{eff, C0} = \)</p>
+                    <p id="modulation__L0__value"></p>
+                    <p>\(\cdot V_{max} = \)</p>
+                    <p id="rmsVoltage__L0"></p>
+                    <p>\(V\)</p>
+                </div>
+                <div>
+                    <h4>Effective Voltage for Conductor-Conductor</h4>
+                    <p>\(V_{eff, CC} = \)</p>
+                    <p id="modulation__LL__value"></p>
+                    <p>\(\cdot V_{max} = \)</p>
+                    <p id="rmsVoltage__LL"></p>
+                    <p>\(V\)</p>
+                </div>
+            </div>
+        </div>
+        <!-- Altitude -->
+        <div class="reference__container">
+            <h3>Correction Factor - Altitude</h3>
+            <div class="check__buttons">
+                <form>
+                    <input type="button" onclick="checkAltFactor()" value="Check Correction Factor">
+                </form>
+            </div>
+        </div>
+        <div class="altitude__container">
+            
+        </div>
+
+        <!-- Clearance -->
+        <div class="reference__container">
+            <h3>Minimum clearance in air up to 2000m above see level</h3>
+            <div class="check__buttons">
+                <form>
+                    <input type="button" onclick="checkClearance()" value="Check Clearance">
+                </form>
+            </div>
+        </div>
+        <div class="clearance__container">
+
+        </div>
+
+
+        <!-- Creepage -->
+        <div class="reference__container">
+            <h3>Minimum creepage distance</h3>
+            <div class="check__buttons">
+                <form>
+                    <input type="button" onclick="checkCreepage()" value="Check Creepage Distance">
+                </form>
+            </div>
+        </div>
+        <div class="creepage__container">
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h1 class="contact__title">Contact me</h1>
+        <h3 class="contact__email">kimhy0809@gmail.com</h3>
+        <div class="contact__links">
+            <a href="https://github.com/freeandblue" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://de.linkedin.com/in/hye-yeong-kim-2384b4144" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:kimhy0809@gmail.com?Subject=Some%20subject">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p class="contact__rights">2021 H.Kim <br/>All rights reserved</p>
+    </section>
+
+    <!-- Arrow up button -->
+    <button class="arrow-up-btn">
+        <i class="fas fa-chevron-circle-up"></i>
+    </button>
+</body>
+</html>
+
+<!-- MathJax -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" ></script>

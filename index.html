@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free & Blue</title>
+
+    <!----Meta data for page description---->
+    <meta name="description" content="Everything about electrical & information technology engineer Kimmi">
+    <meta name="author" content="Kimmi">
+
+    <!----Favicon (logo on the page tab)---->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!----Add fonts etc.---->
+    <script src="https://kit.fontawesome.com/f2d585ad40.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+
+    <!----Add css & js file---->
+    <!---use "defer" for running js after html is pursued-->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <i class="fab fa-pagelines"></i>
+            <a href="#">free & blue</a>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#about">About</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#projects">Projects</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
+        </ul>
+        <!-- Toggle button -->
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <div class="home__container">
+            <img src="images/profile.JPG" alt="profile foto" class="home__avatar">
+            <h1 class="home__title">Hello, I'm Kimmi</h1>
+            <h2 class="home__description">An automotive electrical engineer with programmer mindset, <br/> currently residing in Germany</h2>
+            <button class="home__contact">Contact me</button>
+        </div>  
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section__container">
+        <h1 class="about__title">About me</h1>
+        <p class="about__text">
+            I'm a research & development engineer for electromagnetic design of electric machines and an enthusiastic software developer.<br/><br/>
+            It has been always in me to think how to work clever and in a more efficient way. Since time is the most valuable resource in the modern world, every minute you spent for work should be worthy enough. It may sound ironic, but I prefer to spend time in writing small programms or scripts that can accelerate simulations or simple daily tasks. Even for things that are so complicated that I need to look for multiple standards, physical theories and equations behind again and again, It helps a lot being fast and accurate.<br/>
+            Some of those scripts are for analytic calculations of electric machines, which helps for a quick feasibility check for example for design variations. Of course it does not offer the accuracy as a FEA simulation does, but it definitely helps for a quick idea check.
+            I also have numerous mini scripts for simple calculations based on simple physics or equations that you need quite often as a motor design engineer.<br/>
+            Additionally, it is really important for me to make those tools user-friendly and to visualize & present the data in a good looking way. <br/><br/>
+            In general, I would describe myself as a <span style="text-decoration:underline;">"software-oriented person"</span>, because I feel joy and enthusiasm while programming!<br/>
+            So my personal goal is to learn more and deeper about software development by doing mini projects and to publish them right here in this website for feedbacks and for more challenges and chances.
+            Please feel free to contact me. I'm glad for any constructive feedbacks and your interests.
+        </p>
+        <!-- Jobs -->
+        <div class="about__jobs">
+            <div class="job__position">
+                <div class="logo__container">
+                    <img src="images/jobs/amg.png" alt="Mercedes-AMG" class="job__logo">
+                </div>
+                <p class="job__title">Development engineer for electric machines</p>
+            </div>
+            <div class="job__description">
+                <p class="job__detail">Development of belt starter generators, traction motors for high voltage hybrid & electric cars</p>
+                <p class="job__period">Dec. 2019 ~</p>
+            </div>
+            <div class="job__position">
+                <div class="logo__container">
+                    <img src="images/jobs/brose.png" alt="Brose" class="job__logo">
+                </div>
+                <p class="job__title">Project engineer</p>
+            </div>
+            <div class="job__description">
+                <p class="job__detail">Development of electric climate compressor</p>
+                <p class="job__period">Mar. 2018 ~ Nov. 2019</p>
+            </div>
+            <div class="job__position">
+                <div class="logo__container">
+                    <img src="images/jobs/mando.png" alt="Mando" class="job__logo">
+                </div>
+                <p class="job__title">Development engineer for electric machines</p>
+            </div>
+            <div class="job__description">
+                <p class="job__detail">Design of Permanent Magnet Synchronous Machines for electric power steering system</p>
+                <p class="job__period">Jan. 2016 ~ Mar. 2018</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1 class="skills__title">Skills</h1>
+            <p class="skills__description">
+            </p>
+            <!-- Skill set -->
+            <div class="skillset">
+                <!-- left side -->
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Electric Machine Design</h3>
+                    <p class="skillset__description">Concept design, design optimization <br/> (Electromagnetic FEA Simulation)</p>
+                    <div class="skillset__container">
+                        <div class="skill">
+                            <div class="skill__description">
+                                <span>JMAG</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__value" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__description">
+                                <span>FLUX2D</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__value" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__description">
+                                <span>MATLAB</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__value" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__description">
+                                <span>CAD (Siemens NX, CATIA)</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__value" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right side -->
+                <div class="skillset__right">
+                    <h3 class="skillset__title">Software Development</h3>
+                    <p class="skillset__description">Front-end, mobile (iOS), <br/>machine learning</p>
+                    <div class="skillset__container">
+                        <div class="skill">
+                            <div class="skill__description">
+                                <span>HTML</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__value" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__description">
+                                <span>CSS</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__value" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__description">
+                                <span>JavaScript</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__value" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__description">
+                                <span>Java</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__value" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill__description">
+                                <span>Python</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__value" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="section__container">
+            <h1 class="projects__title">Projects</h1>
+            <!-- Categories -->
+            <div class="projects__categories">
+                <button class="category__btn active" data-filter="*">All<span class="category__count">12</span></button>
+                <button class="category__btn" data-filter="motor">E-Machine<span class="category__count">3</span></button>
+                <button class="category__btn" data-filter="frontend">Front-end<span class="category__count">3</span></button>
+                <button class="category__btn" data-filter="mobile">Mobile<span class="category__count">3</span></button>
+                <button class="category__btn" data-filter="others">Others<span class="category__count">3</span></button>
+            </div>
+            <!-- Items -->
+            <div class="projects__item">
+                <a href="" class="project" target="blank" data-type="motor">
+                    <img src="images/projects/motor.jpg" alt="motor" class="project__img">
+                    <div class="project__description">
+                        <h3>E-Machine</h3>
+                        <span>Analysis, calculation, design</span>
+                    </div>
+                </a>
+                <a href="projects/LuK.html" class="project" target="blank" data-type="motor">
+                    <img src="images/projects/LuK.jpg" alt="clearance and creepage" class="project__img">
+                    <div class="project__description">
+                        <h3>E-Machine</h3>
+                        <span>Clearance and creepage distance for electrical insulation</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="blank" data-type="frontend">
+                    <img src="images/projects/frontend.jpg" alt="front-end" class="project__img">
+                    <div class="project__description">
+                        <h3>Front-end</h3>
+                        <span>HTML, CSS, JavaScript</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="blank" data-type="mobile">
+                    <img src="images/projects/mobile.jpg" alt="mobile" class="project__img">
+                    <div class="project__description">
+                        <h3>Mobile Development</h3>
+                        <span>iOS Applications</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="blank" data-type="others">
+                    <img src="images/projects/others.jpg" alt="others" class="project__img">
+                    <div class="project__description">
+                        <h3>Others</h3>
+                        <span>interesting & fun stuff</span>
+                    </div>
+                </a>
+            </div>
+        </div>  
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h1 class="contact__title">Contact me</h1>
+        <h3 class="contact__email">kimhy0809@gmail.com</h3>
+        <div class="contact__links">
+            <a href="https://github.com/freeandblue" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://de.linkedin.com/in/hye-yeong-kim-2384b4144" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:kimhy0809@gmail.com?Subject=Some%20subject">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p class="contact__rights">2021 H.Kim <br/>All rights reserved</p>
+    </section>
+
+    <!-- Arrow up button -->
+    <button class="arrow-up-btn">
+        <i class="fas fa-chevron-circle-up"></i>
+    </button>
+
+</body>
+</html>
