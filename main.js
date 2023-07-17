@@ -36,7 +36,7 @@ toggleBtn.addEventListener('click', () => {
 });
 
 /*--- Make home slowly fade to transparent as the window scrolls down ---*/
-const home = document.querySelector('#home.section');
+const home = document.querySelector('.home_container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1-window.scrollY / homeHeight;
@@ -54,7 +54,7 @@ document.addEventListener('scroll', () => {
 
 /*--- Scroll to home when arrow up button is clicked ---*/
 arrowUp.addEventListener('click', () => {
-    const homeSection = document.querySelector('#home.section');
+    const homeSection = document.querySelector('home_container');
     homeSection.scrollIntoView({behavior: "smooth"});
 });
 
