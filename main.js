@@ -47,7 +47,7 @@ document.addEventListener('scroll', () => {
 
 /*--- Scroll to home when arrow up button is clicked ---*/
 arrowUp.addEventListener('click', () => {
-    const pageTop = document.querySelector('#page-top');
+    const pageTop = document.querySelector('#home');
     pageTop.scrollIntoView({behavior: "smooth"});
 });
 
