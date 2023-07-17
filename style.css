@@ -157,6 +157,8 @@ p {
   background: url("images/front.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 110px;
+  margin-top: 250px;
+  margin-bottom: 250px;
   text-align: center;
 }
 
