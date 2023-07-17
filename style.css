@@ -22,7 +22,7 @@
   --weight-regular: 400;
 
   /* Size */
-  --size-border-radius: 20px;
+  --size-border-radius: 2px;
 
   /* Animation */
   --animation-duration: 300ms;
@@ -204,7 +204,6 @@ p {
   display: flex;
   /* spacing */
   text-align: center;
-  margin: 60px 0;
 }
 
 .job__position {
@@ -234,7 +233,6 @@ p {
   margin: 60px 40px 20px 0px;
 }
 .category__btn {
-  border: 1px solid var(--color-medium);
   border-radius: var(--size-border-radius);
   font-size: var(--font-small);
   padding: 8px 20px;
@@ -244,19 +242,9 @@ p {
 
 .category__btn.active,
 .category__btn:hover {
-  background-color: var(--color-light);
-  border-color: var(--color-lightgrey);
-}
-
-.category__count {
-  border: 1px solid var(--color-white);
-  background-color: var(--color-highlight);
+  background-color: var(--color-black);
+  border-color: var(--color-white);
   color: var(--color-white);
-  border-radius: 50%;
-  margin-left: 10px;
-  width: 24px;
-  height: 24px;
-  display: inline-block;
 }
 
 .projects__item {
