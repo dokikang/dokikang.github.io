@@ -74,19 +74,21 @@
               bei Prof. Sofia Hultén<br/><br/><br/><br/>
             </p>
         </div>
-        <div class="job__position job__highlight">
-            <h2 class="job__title">Gruppenausstellung<br/></h2>
-        </div>
-        <div class="job__description job__highlight">
-            <p class="job__detail">
-              2016 Bergstaffel I , Stuttgart<br/><br/>
-              2017 Bergstaffel II , Stuttgart<br/><br/>
-              Cloud , Kunstverein Neuhausen<br/><br/>
-              2019 Dem Anlass Entsprechend , Stuttgart<br/><br/>
-              2021 Off_Line , Stuttgart<br/><br/>
-              Ohne Titel , Stuttgart<br/><br/>
-              Vasen  , Stuttgart<br/><br/>
-            </p>
+        <div class="job__highlight">
+          <div class="job__position">
+              <h2 class="job__title">Gruppenausstellung<br/></h2>
+          </div>
+          <div class="job__description">
+              <p class="job__detail">
+                2016 Bergstaffel I , Stuttgart<br/><br/>
+                2017 Bergstaffel II , Stuttgart<br/><br/>
+                Cloud , Kunstverein Neuhausen<br/><br/>
+                2019 Dem Anlass Entsprechend , Stuttgart<br/><br/>
+                2021 Off_Line , Stuttgart<br/><br/>
+                Ohne Titel , Stuttgart<br/><br/>
+                Vasen  , Stuttgart<br/><br/>
+              </p>
+          </div>
         </div>
       </div>
     </section>
@@ -94,20 +96,53 @@
     <!-- Projects -->
     <section id="projects" class="section">
         <div class="section__container">
-          <div class="row">
             <h1 class="projects__title">Projekte</h1>
-          </div>
-          <div class="row">
+            <!-- Categories -->
+            <div class="projects__categories">
+                <button class="category__btn active" data-filter="*">All</button>
+                <button class="category__btn" data-filter="2016">2016</button>
+                <button class="category__btn" data-filter="2017">2017</button>
+                <button class="category__btn" data-filter="2018">2018</button>
+                <button class="category__btn" data-filter="2019">2019</button>
+            </div>
+            <!-- Items -->
             <div class="projects__item">
                 <a href="" class="project" target="blank" data-type="2016">
-                  <div class="project-hover">
+                    <img src="images/projects/motor.jpg" alt="motor" class="project__img">
                     <div class="project__description">
-                      <h2>2016</h2>
+                        <h3>E-Machine</h3>
+                        <span>Analysis, calculation, design</span>
                     </div>
-                  </div>
+                </a>
+                <a href="projects/LuK.html" class="project" target="blank" data-type="motor">
+                    <img src="images/projects/LuK.jpg" alt="clearance and creepage" class="project__img">
+                    <div class="project__description">
+                        <h3>E-Machine</h3>
+                        <span>Clearance and creepage distance for electrical insulation</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="blank" data-type="frontend">
+                    <img src="images/projects/frontend.jpg" alt="front-end" class="project__img">
+                    <div class="project__description">
+                        <h3>Front-end</h3>
+                        <span>HTML, CSS, JavaScript</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="blank" data-type="mobile">
+                    <img src="images/projects/mobile.jpg" alt="mobile" class="project__img">
+                    <div class="project__description">
+                        <h3>Mobile Development</h3>
+                        <span>iOS Applications</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="blank" data-type="others">
+                    <img src="images/projects/others.jpg" alt="others" class="project__img">
+                    <div class="project__description">
+                        <h3>Others</h3>
+                        <span>interesting & fun stuff</span>
+                    </div>
                 </a>
             </div>
-          </div>
         </div>
     </section>
 
