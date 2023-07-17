@@ -54,7 +54,7 @@ document.addEventListener('scroll', () => {
 
 /*--- Scroll to home when arrow up button is clicked ---*/
 arrowUp.addEventListener('click', () => {
-    const homeSection = document.querySelector('#home');
+    const homeSection = document.querySelector('#home.section');
     homeSection.scrollIntoView({behavior: "smooth"});
 });
 
