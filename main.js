@@ -14,6 +14,18 @@ document.addEventListener('scroll', () => {
 });
 
 /*--- Scroll by click ---*/
+$(function() {
+    $('section.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+
+        event.preventDefault();
+   });
+});
+
+/*
 // get navbar menu elements with query selector
 const navbarMenu = document.querySelector('.navbar__menu');
 // register event for the navbar menu: run defined function by click
@@ -27,7 +39,7 @@ navbarMenu.addEventListener('click', (event) => {
     home.classList.remove('open');
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior: "smooth"});
-});
+});*/
 
 /*--- Navbar toggle button ---*/
 const toggleBtn = document.querySelector('.navbar__toggle-btn');
@@ -35,14 +47,14 @@ toggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 });
 
-/*--- Make home slowly fade to transparent as the window scrolls down ---*/
+/*--- Make home slowly fade to transparent as the window scrolls down ---
 const home = document.querySelector('.home_container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1-window.scrollY / homeHeight;
-});
+});*/
 
-/*--- Show arrow up button when scrolling down ---*/
+/*--- Show arrow up button when scrolling down ---
 const arrowUp = document.querySelector('.arrow-up-btn');
 document.addEventListener('scroll', () => {
     if(window.scrollY > homeHeight / 2) {
@@ -50,7 +62,7 @@ document.addEventListener('scroll', () => {
     } else {
         arrowUp.classList.remove('visible');
     }
-});
+});*/
 
 /*--- Scroll to home when arrow up button is clicked ---*/
 arrowUp.addEventListener('click', () => {
