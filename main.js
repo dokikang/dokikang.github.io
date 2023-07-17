@@ -36,7 +36,7 @@ toggleBtn.addEventListener('click', () => {
 });
 
 /*--- Make home slowly fade to transparent as the window scrolls down ---*/
-const home = document.querySelector('#page-top');
+const home = document.querySelector('#home');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1-window.scrollY / homeHeight;
@@ -54,8 +54,8 @@ document.addEventListener('scroll', () => {
 
 /*--- Scroll to home when arrow up button is clicked ---*/
 arrowUp.addEventListener('click', () => {
-    const homeSection = document.querySelector('#page-top');
-    homeSection.scrollIntoView({behavior: "smooth"});
+    const pageTop = document.querySelector('#page-top');
+    pageTop.scrollIntoView({behavior: "smooth"});
 });
 
 if(document.querySelector('#projects') != null) {
