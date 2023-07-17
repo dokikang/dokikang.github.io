@@ -161,17 +161,17 @@ p {
   padding-top: 250px;
 }
 
-/*.home__title,
+.home__title,
 .home__description {
   color: var(--color-text);
-}*/
+}
 
-/*.home__avatar {
+.home__avatar {
   width: 150px;
   height: 150px;
   border-radius: 30%;
   border: 2px solid var(--color-white);
-}*/
+}
 
 .home__contact {
   font-size: var(--font-regular);
