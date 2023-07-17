@@ -35,13 +35,6 @@ toggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 });
 
-/*--- Scroll to contact section when clicking on the contact-me button ---*/
-const homeContactBtn = document.querySelector('.home__contact');
-homeContactBtn.addEventListener('click', () => {
-    const contactSection = document.querySelector('#contact');
-    contactSection.scrollIntoView({behavior: "smooth"});
-});
-
 /*--- Make home slowly fade to transparent as the window scrolls down ---*/
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
