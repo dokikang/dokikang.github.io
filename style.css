@@ -362,25 +362,19 @@ p {
 }
 
 /* Arrow up button */
-.arrow-up-btn {
-  /* fixed position in viewport -> moves out of the parent box */
+.toTop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   position: fixed;
-  bottom: 2%;
-  right: 2%;
-  font-size: var(--font-medium);
-  background-color: var(--color-highlight);
-  color: var(--color-white);
+  bottom: 10px;
+  right: 10px;
+  color: var(--color-text);
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  opacity: 0;
-  transition: all var(--animation-duration) ease-in-out;
-  pointer-events: none;
-}
-
-.arrow-up-btn.visible {
-  opacity: 1;
-  pointer-events: auto;
+  border: 1px solid #333;
 }
 
 /* For small screen size (below 768px width) */
@@ -422,14 +416,5 @@ p {
 
   .section {
     padding: 16px;
-  }
-
-  .skillset {
-    flex-direction: column;
-  }
-
-  .skillset__left,
-  .skillset__right {
-    margin: 10px 0px;
   }
 }

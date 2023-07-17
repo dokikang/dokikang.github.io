@@ -2,100 +2,53 @@
 
 /*--- Make navbar transparent when it is on the top ---*/
 // get navbar with query selector
-const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height;
+$(function () {
+  'use strict';
+  $('body').css('paddingTop', $('.navbar').innerHeight());
 
-document.addEventListener('scroll', () => {
-    if(window.scrollY > navbarHeight) {
-        navbar.classList.add('navbar--dark');
-    } else {
-        navbar.classList.remove('navbar--dark');
-    }
-});
+  $('.navbar li a').click(function () {
+    $('html, body').animate({
+      scrollTop: $($(this).data('scroll')).offset().top + 1
+    }, 1000);
 
-/*--- Scroll by click ---*/
-$(function() {
-    $('section.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+    $('.navbar a').removeClass('active');
+    $(this).addClass('active');
 
-        event.preventDefault();
-   });
-});
+    //$(this).addClass('active').parent().siblings().find('a').removeClass('active');
+  });
 
-/*
-// get navbar menu elements with query selector
-const navbarMenu = document.querySelector('.navbar__menu');
-// register event for the navbar menu: run defined function by click
-navbarMenu.addEventListener('click', (event) => {
-    const target = event.target;
-    const link = target.dataset.link;
-    if(link == null) {
-        return;
-    }
-    navbarMenu.classList.remove('open');
-    home.classList.remove('open');
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: "smooth"});
-});*/
+  $(window).scroll(function () {
+    var winScrollTop = $(this).scrollTop();
+    $('.block').each(function () {
+      if (winScrollTop > $(this).offset().top) {
+        var blockId = '#' + $(this).attr('id');
+        $('.navbar li a').each(function () {
+          if ($(this).attr('data-scroll') === blockId) {
+            $('.navbar a').removeClass('active');
+            $(this).addClass('active');
+            /*
+            $(this).addClass('active').parent().siblings().find('a').removeClass('active');
+            */
 
-/*--- Navbar toggle button ---*/
-const toggleBtn = document.querySelector('.navbar__toggle-btn');
-toggleBtn.addEventListener('click', () => {
-    navbarMenu.classList.toggle('open');
-});
-
-/*--- Make home slowly fade to transparent as the window scrolls down ---
-const home = document.querySelector('.home_container');
-const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-    home.style.opacity = 1-window.scrollY / homeHeight;
-});*/
-
-/*--- Show arrow up button when scrolling down ---
-const arrowUp = document.querySelector('.arrow-up-btn');
-document.addEventListener('scroll', () => {
-    if(window.scrollY > homeHeight / 2) {
-        arrowUp.classList.add('visible');
-    } else {
-        arrowUp.classList.remove('visible');
-    }
-});*/
-
-/*--- Scroll to home when arrow up button is clicked ---*/
-arrowUp.addEventListener('click', () => {
-    const homeSection = document.querySelector('home_container');
-    homeSection.scrollIntoView({behavior: "smooth"});
-});
-
-if(document.querySelector('#projects') != null) {
-    /*--- Make projects filtered by categories ---*/
-    const projectCategories = document.querySelector('.projects__categories');
-    const projectItems = document.querySelector('.projects__item');
-    const projects = document.querySelectorAll('.project');
-    projectCategories.addEventListener('click', (event) => {
-        const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
-        if(filter==null) {
-            return;
-        }
-    /* make the clicked project active */
-        const active = document.querySelector('.category__btn.active');
-        active.classList.remove('active');
-        const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
-        target.classList.add('active');
-        /* animation */
-        projectItems.classList.add('animation');
-        setTimeout(() => {
-        projects.forEach((project) => {
-            if(filter === '*' || filter === project.dataset.type) {
-                project.classList.remove('invisible');
-            } else {
-                project.classList.add('invisible');
-            }
+          }
         });
-        projectItems.classList.remove('animation');
-        }, 300);
+      }
     });
-};
+    //Scroll Element
+    var toTop = $('.toTop');
+    if ($(window).scrollTop() >= 500) {
+      if (toTop.is(':hidden')) {//For performance
+        toTop.fadeIn().css('display', 'flex');
+      }
+    } else {
+      toTop.fadeOut();
+    }
+  });
+
+  $('.toTop').click(function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1000);
+  });
+});
