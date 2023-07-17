@@ -166,10 +166,7 @@ p {
 }
 
 .home__avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 30%;
-  border: 2px solid var(--color-white);
+  width: 300px;
 }
 
 .home__contact {
