@@ -6,7 +6,7 @@
   --color-light: #a8dadc;
   --color-white: #ffffff;
   --color-lightgrey: rgb(245, 245, 245);
-  --color-highlight: #e63946;
+  --color-highlight: #A3FF33;
   --color-text: #000000;
 
   /* Font size */
@@ -167,8 +167,9 @@ p {
   color: var(--color-text);
 }
 
-.home__avatar {
-  width: 500px;
+.home__image {
+  max-width: 100%;
+  max-height: 100%;
   text-align: center;
 }
 
@@ -245,9 +246,7 @@ p {
 
 .category__btn.active,
 .category__btn:hover {
-  background-color: var(--color-text);
-  border-color: var(--color-white);
-  color: var(--color-white);
+  color: var(--color-highlight);
 }
 
 .projects__item {
