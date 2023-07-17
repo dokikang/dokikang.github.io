@@ -168,6 +168,7 @@ p {
 
 .home__avatar {
   width: 500px;
+  text-align: center;
 }
 
 .home__contact {
