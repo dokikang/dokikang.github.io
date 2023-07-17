@@ -169,6 +169,7 @@ p {
   display: grid;
   width: 60%;
   place-items: center;
+  text-align: center;
 }
 
 .home__contact {
