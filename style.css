@@ -235,7 +235,7 @@ p {
 }
 .category__btn {
   border-radius: var(--size-border-radius);
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
   padding: 8px 20px;
   margin: 5px 5px;
   background-color: var(--color-white);
@@ -243,7 +243,7 @@ p {
 
 .category__btn.active,
 .category__btn:hover {
-  background-color: var(--color-black);
+  background-color: var(--color-text);
   border-color: var(--color-white);
   color: var(--color-white);
 }
