@@ -35,13 +35,6 @@ toggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 });
 
-/*--- Make home slowly fade to transparent as the window scrolls down ---*/
-const home = document.querySelector('#home');
-const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-    home.style.opacity = 1-window.scrollY / homeHeight;
-});
-
 /*--- Show arrow up button when scrolling down ---*/
 const arrowUp = document.querySelector('.arrow-up-btn');
 document.addEventListener('scroll', () => {
