@@ -237,7 +237,7 @@ p {
 
 /* Projects */
 .projects__categories {
-  margin: 60px 40px 20px 0px;
+  margin: 60px 40px 20px 40px;
 }
 .category__btn {
   border-radius: var(--size-border-radius);
