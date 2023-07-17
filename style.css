@@ -154,7 +154,8 @@ p {
 
 /* Home */
 #home {
-  width: 200px;
+  display: block;
+  width: 500px;
   padding-top: 250px;
   padding-bottom: 250px;
   text-align: center;
