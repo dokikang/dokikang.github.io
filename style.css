@@ -201,7 +201,7 @@ p {
 
 .about__jobs {
   /* elements in a box */
-  display: flex;
+  display: block;
   /* spacing */
   text-align: center;
 }
