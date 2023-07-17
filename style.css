@@ -204,6 +204,7 @@ p {
   display: block;
   /* spacing */
   text-align: center;
+  margin: 60px 0;
 }
 
 .job__position {
