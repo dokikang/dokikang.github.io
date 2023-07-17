@@ -166,10 +166,9 @@ p {
 }
 
 .home__image {
-  display: grid;
+  display: block;
   width: 60%;
-  place-items: center;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .home__contact {
