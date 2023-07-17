@@ -97,6 +97,13 @@ h3 {
   margin: 8px, 0px;
 }
 
+h4 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-text);
+  margin: 8px, 0px;
+}
+
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
@@ -196,7 +203,7 @@ p {
 
 .about__text {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .about__jobs {
