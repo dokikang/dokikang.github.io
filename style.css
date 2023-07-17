@@ -154,6 +154,7 @@ p {
 
 /* Home */
 #home {
+  width: 60%;
   padding-top: 250px;
   padding-bottom: 250px;
   text-align: center;
