@@ -171,7 +171,7 @@ p {
 
 .home__image {
   display: block;
-  max-width: 70%;
+  max-width: 100%;
   margin: 0 auto;
   vertical-align: middle;
 }
