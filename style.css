@@ -223,6 +223,10 @@ p {
   display: block;
 }
 
+.job__highlight {
+  background-color: var(--color-lightgrey);
+}
+
 .job__detail {
   margin: 0px;
 }
