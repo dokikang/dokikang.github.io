@@ -6,7 +6,7 @@
   --color-light: #a8dadc;
   --color-white: #ffffff;
   --color-lightgrey: rgb(245, 245, 245);
-  --color-highlight: #A3FF33;
+  --color-highlight: #93F62A;
   --color-text: #000000;
 
   /* Font size */
@@ -155,7 +155,6 @@ p {
 /* Home */
 #home {
   width: 100%;
-  padding: 40px;
   padding-top: 250px;
   padding-bottom: 250px;
   text-align: center;
@@ -167,7 +166,7 @@ p {
 }
 
 .home__image {
-  max-width: 75%;
+  max-width: 100%;
   text-align: center;
 }
 
