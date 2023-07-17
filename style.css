@@ -154,8 +154,6 @@ p {
 
 /* Home */
 #home {
-  display: block;
-  width: 500px;
   padding-top: 250px;
   padding-bottom: 250px;
   text-align: center;
@@ -167,8 +165,9 @@ p {
 }
 
 .home__image {
-  max-width: 60%;
-  text-align: center;
+  display: grid;
+  width: 60%;
+  place-items: center;
 }
 
 .home__contact {
