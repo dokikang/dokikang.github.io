@@ -362,19 +362,25 @@ p {
 }
 
 /* Arrow up button */
-.toTop {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
+.arrow-up-btn {
+  /* fixed position in viewport -> moves out of the parent box */
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  color: var(--color-text);
-  width: 35px;
-  height: 35px;
+  bottom: 2%;
+  right: 2%;
+  font-size: var(--font-medium);
+  background-color: var(--color-highlight);
+  color: var(--color-white);
   border-radius: 50%;
-  border: 1px solid #333;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in-out;
+  pointer-events: none;
+}
+
+.arrow-up-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* For small screen size (below 768px width) */

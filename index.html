@@ -26,22 +26,14 @@
     <nav id="navbar">
         <div class="navbar__logo">
             <i class="fab fa-pagelines"></i>
-            <a href="#" data-scroll="#home">Doki's Atelier</a>
+            <a href="#">Doki's Atelier</a>
         </div>
         <ul class="navbar__menu">
-            <li>
-              <a href="#" data-scroll="#home">Home</a>
-            </li>
-            <li>
-              <a href="#" data-scroll="#about">Über mich</a>
-            </li>
-            <li>
-              <a href="#" data-scroll="#projects">Projekte</a>
-            </li>
-            <li>
-              <a href="#" data-scroll="#contact">Kontakt</a>
-            </li>
-          </ul>
+            <li class="navbar__menu__item" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#about">Über mich</li>
+            <li class="navbar__menu__item" data-link="#projects">Projekte</li>
+            <li class="navbar__menu__item" data-link="#contact">Kontakt</li>
+        </ul>
         <!-- Toggle button -->
         <button class="navbar__toggle-btn">
             <i class="fas fa-bars"></i>
@@ -49,7 +41,7 @@
     </nav>
 
     <!-- Home -->
-    <section id="home" class="section">
+    <section id="home" class="section section__container">
       <div class="home__container">
       </div>
     </section>
@@ -113,6 +105,7 @@
             <!-- Items -->
             <div class="projects__item">
                 <a href="" class="project" target="blank" data-type="2016">
+                    <img src="images/projects/motor.jpg" alt="motor" class="project__img">
                     <div class="project__description">
                         <h3>E-Machine</h3>
                         <span>Analysis, calculation, design</span>
@@ -169,7 +162,9 @@
     </section>
 
     <!-- Arrow up button -->
-    <a href="#" class="toTop"><i class="fa fa-chevron-up fa-lg"></i></a>
+    <button class="arrow-up-btn">
+        <i class="fas fa-chevron-circle-up"></i>
+    </button>
 
 </body>
 </html>
