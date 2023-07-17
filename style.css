@@ -154,8 +154,7 @@ p {
 
 /* Home */
 #home {
-  width: 30%;
-  height: 200px;
+  width: 100%;
   padding: 40px;
   padding-top: 250px;
   padding-bottom: 250px;
@@ -168,7 +167,7 @@ p {
 }
 
 .home__image {
-  max-width: 50%;
+  max-width: 75%;
   text-align: center;
 }
 
